@@ -1,0 +1,1587 @@
+/* 
+--  All styles are imported into this main stylesheet
+*/
+/* 
+--  Theme specific styles
+*/
+/* 
+--  Button placeholders
+--  Using placeholders rather than mixins cuts down on CSS duplication
+--  .my-button {@extend %btn-primary;}
+--  Create another file to override these styles if needed
+*/
+.main-nav-links, .top-nav-bar .nav-container .link-scroll .h-menu a, .top-nav-bar .more-links-div ul a {
+  color: #fff;
+  background-color: transparent;
+  border: none; }
+  .main-nav-links:hover, .top-nav-bar .nav-container .link-scroll .h-menu a:hover, .top-nav-bar .more-links-div ul a:hover {
+    color: #265B8C;
+    background-color: #DEDEDE; }
+
+.sidebar-slide-menu-links, .slide-menu-right .navbar li a, .slide-menu-right .navbar li #pagePortlets .glyphicons, .slide-menu-right .navbar li #pagePortlets .custom-icon, .slide-menu-right .navbar li #myPages .glyphicons, .slide-menu-right .navbar li #myPages .custom-icon, .slide-menu-right .navbar li #myGroups .glyphicons, .slide-menu-right .navbar li #myGroups .custom-icon {
+  color: #265B8C;
+  background-color: transparent;
+  border: none; }
+  .sidebar-slide-menu-links:hover, .slide-menu-right .navbar li a:hover, .slide-menu-right .navbar li #pagePortlets .glyphicons:hover, .slide-menu-right .navbar li #pagePortlets .custom-icon:hover, .slide-menu-right .navbar li #myPages .glyphicons:hover, .slide-menu-right .navbar li #myPages .custom-icon:hover, .slide-menu-right .navbar li #myGroups .glyphicons:hover, .slide-menu-right .navbar li #myGroups .custom-icon:hover {
+    color: #fff;
+    background-color: #265B8C; }
+
+.link-secondary-dark {
+  color: #3e3e3e; }
+  .link-secondary-dark:hover {
+    color: #3e3e3e; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #265B8C;
+  border: none; }
+  .btn-primary:hover {
+    background-color: #265B8C; }
+  .btn-primary:active {
+    background-color: #265B8C;
+    box-shadow: none; }
+  .btn-primary:active:hover, .btn-primary:active:focus {
+    background-color: #265B8C; }
+  .btn-primary:focus {
+    background-color: #265B8C; }
+
+.btn-primary-no-bg {
+  color: #fff;
+  background-color: transparent;
+  border: none; }
+  .btn-primary-no-bg:hover {
+    background-color: transparent; }
+  .btn-primary-no-bg:active {
+    background-color: transparent;
+    box-shadow: none; }
+  .btn-primary-no-bg:active:hover, .btn-primary-no-bg:active:focus {
+    background-color: transparent; }
+  .btn-primary-no-bg:focus {
+    background-color: transparent; }
+  .btn-primary-no-bg:hover, .btn-primary-no-bg:focus {
+    color: #fff; }
+
+.btn-danger {
+  color: #fff;
+  background-color: #D33A35;
+  border: none; }
+  .btn-danger:hover {
+    background-color: #D33A35; }
+  .btn-danger:active {
+    background-color: #D33A35;
+    box-shadow: none; }
+  .btn-danger:active:hover, .btn-danger:active:focus {
+    background-color: #D33A35; }
+  .btn-danger:focus {
+    background-color: #D33A35; }
+
+.btn-success {
+  color: #fff;
+  background-color: #417505;
+  border: none; }
+  .btn-success:hover {
+    background-color: #417505; }
+  .btn-success:active {
+    background-color: #417505;
+    box-shadow: none; }
+  .btn-success:active:hover, .btn-success:active:focus {
+    background-color: #417505; }
+  .btn-success:focus {
+    background-color: #417505; }
+
+.btn-primary-jquery-ui-override {
+  font-family: Open Sans !important;
+  color: #fff !important;
+  background: #265B8C !important;
+  border: none !important;
+  text-shadow: none !important; }
+  .btn-primary-jquery-ui-override:hover {
+    background-color: #265B8C !important; }
+  .btn-primary-jquery-ui-override:active {
+    background-color: #265B8C !important;
+    box-shadow: none !important; }
+  .btn-primary-jquery-ui-override:active:hover, .btn-primary-jquery-ui-override:active:focus {
+    background-color: #265B8C !important; }
+  .btn-primary-jquery-ui-override:focus {
+    background-color: #265B8C !important; }
+
+.btn-danger-jquery-ui-override {
+  font-family: Open Sans !important;
+  color: #fff !important;
+  background: #D33A35 !important;
+  border: none !important;
+  text-shadow: none !important; }
+  .btn-danger-jquery-ui-override:hover {
+    background-color: #D33A35 !important; }
+  .btn-danger-jquery-ui-override:active {
+    background-color: #D33A35 !important;
+    box-shadow: none !important; }
+  .btn-danger-jquery-ui-override:active:hover, .btn-danger-jquery-ui-override:active:focus {
+    background-color: #D33A35 !important; }
+  .btn-danger-jquery-ui-override:focus {
+    background-color: #D33A35 !important; }
+
+.link-btn {
+  color: #265B8C;
+  background: none;
+  border: none; }
+
+.link-btn-jquery-ui-btn-override {
+  font-family: Open Sans !important;
+  color: #265B8C !important;
+  text-decoration: underline !important;
+  background: none !important;
+  border: none !important;
+  text-shadow: none !important; }
+
+a.disabled {
+  color: #575757; }
+
+/* 
+--  Base colors
+--  Create another file to override these styles if needed
+*/
+.primary {
+  color: #265B8C; }
+
+.white {
+  color: #fff; }
+
+.black {
+  color: #000; }
+
+.yellow {
+  color: #fffde5; }
+
+.default-gray {
+  color: #DEDEDE; }
+
+.danger {
+  color: #D33A35; }
+
+.error {
+  color: #D33A35; }
+
+.success {
+  color: #417505; }
+
+.feedback {
+  color: #265B8C; }
+
+.danger-dark {
+  color: #af2a26; }
+
+.body-text {
+  color: #575757; }
+
+.body-text-light {
+  color: #bdbdbd; }
+
+.disabled-link {
+  color: #5f5f5f; }
+
+.white-background {
+  background-color: #fff; }
+
+.primary-background {
+  background-color: #265B8C; }
+
+.primary-soft-background {
+  background-color: #ebf2f9; }
+
+.primary-extra-soft-background {
+  background-color: #d7dfec; }
+
+.soft-background {
+  background-color: whitesmoke; }
+
+.default-gray-background {
+  background-color: #DEDEDE; }
+
+.medium-gray-background {
+  background-color: #d9d9d9; }
+
+.dark-gray-background {
+  background-color: #ababab; }
+
+.warning-background {
+  background-color: #fffde5; }
+
+.success-light-background {
+  background-color: #77d709; }
+
+.transparent-background-desktop {
+  background-color: transparent; }
+
+.default-border {
+  border-color: #DEDEDE; }
+
+.default-top-border {
+  border-top-color: #DEDEDE; }
+
+.default-right-border {
+  border-right-color: #DEDEDE; }
+
+.default-bottom-border {
+  border-bottom-color: #DEDEDE; }
+
+.default-left-border {
+  border-left-color: #DEDEDE; }
+
+.dark-border {
+  border-color: #ababab; }
+
+.dark-top-border {
+  border-top-color: #ababab; }
+
+.dark-right-border {
+  border-right-color: #ababab; }
+
+.dark-bottom-border {
+  border-bottom-color: #ababab; }
+
+.dark-left-border {
+  border-left-color: #ababab; }
+
+.warning-border {
+  border-color: #fffde5; }
+
+.dark-yellow-border {
+  border-color: #e5d300; }
+
+.transparent-border {
+  border-color: transparent; }
+
+/* 
+--  Base mobile colors specific styles
+--  Create another file to override these styles if needed
+*/
+@media screen and (max-width: 1025px) {
+  .portlet-style-override .primary-hover-state {
+    color: inherit; }
+    .portlet-style-override .primary-hover-state:hover {
+      color: #fff;
+      background-color: #265B8C; }
+  .portlet-style-override .white-primary-bg.override-hover-state {
+    color: #fff;
+    background-color: #265B8C; }
+    .portlet-style-override .white-primary-bg.override-hover-state:hover {
+      color: #fff;
+      background-color: #265B8C; }
+
+  .soft-background-mobile {
+    background-color: whitesmoke; } }
+/* 
+--  Button color specific styles
+--  Create another file to override these styles if needed
+*/
+.btn-grey {
+  background-color: #707070;
+  color: #FFFFFF; }
+
+.btn-white {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #CCCCCC; }
+
+/* 
+--  Base colors specific styles
+--  Create another file to override these styles if needed
+*/
+body {
+  font-family: Open Sans;
+  font-size: 14px;
+  color: #575757;
+  background: #fff; }
+
+a {
+  color: #265B8C; }
+  a:hover, a:focus {
+    color: #265B8C; }
+
+a.success {
+  color: #417505; }
+  a.success:hover, a.success:focus {
+    color: #417505; }
+
+.feedbackError {
+  color: #D33A35; }
+
+.choose-file {
+  color: #fff;
+  background-color: #265B8C; }
+
+.error-message {
+  color: #D33A35;
+  background: #fff;
+  border: 1px solid #DEDEDE; }
+
+.page-title-btn {
+  background-color: #265B8C; }
+
+.footer-wrapper {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #ababab; }
+
+h5 {
+  border-bottom: solid 1px #999999; }
+
+/* 
+--  Base mobile colors specific styles
+--  Create another file to override these styles if needed
+*/
+@media screen and (max-width: 1025px) {
+  .portlet-style-override .primary-hover-state {
+    color: inherit; }
+    .portlet-style-override .primary-hover-state:hover {
+      color: #fff;
+      background-color: #265B8C; }
+  .portlet-style-override .white-primary-bg.override-hover-state {
+    color: #fff;
+    background-color: #265B8C; }
+    .portlet-style-override .white-primary-bg.override-hover-state:hover {
+      color: #fff;
+      background-color: #265B8C; }
+
+  .soft-background-mobile {
+    background-color: whitesmoke; } }
+/* 
+--  Portlet color specific styles
+--  Create another file to override these styles if needed
+*/
+.portlet-grid .portlet-header-bar {
+  background: #265B8C; }
+  .portlet-grid .portlet-header-bar h3,
+  .portlet-grid .portlet-header-bar a {
+    color: #fff; }
+.portlet-grid .portlet {
+  border: 1px solid #DEDEDE; }
+.portlet-grid .singlePortlet {
+  border: none; }
+.portlet-grid .alt {
+  background: #d6d6d6; }
+
+.portlet.pageSettings, .portlet.pageOptions, .portlet.pageLayouts, .portlet.pageAccess {
+  background-color: white; }
+
+.settings-wrapper .inner-settings-wrapper .innerModal .portlet,
+.preferencesPanel .inner-settings-wrapper .innerModal .portlet {
+  background-color: white !important; }
+
+.portletnavtabs {
+  background: #D4D4D4;
+  border-bottom-color: #A5A5A5; }
+
+.portletSectionJump {
+  background: #D4D4D4;
+  border-left-color: white; }
+
+.portletSectionJump dd {
+  border-right-color: #fff; }
+
+.portletSectionJump dd.selected {
+  border-color: #A5A5A5;
+  background: #fff; }
+
+.portletSectionJump dd a, .portletSectionJump dd a:link, .portletSectionJump dd a:visited {
+  color: #456C91;
+  background: #D4D4D4; }
+
+.portletSectionJump dd.selected a, .portletSectionJump dd.selected a:link, .portletSectionJump dd.selected a:visited {
+  background: #fff;
+  color: #000; }
+
+.portletSectionJump dd a:hover {
+  background: #E1E1E1;
+  color: #003A70; }
+
+.portletSectionJump dd.selected a:hover {
+  background: #fff; }
+
+div.tabGroup ul.tabHeaders li.selected a,
+div.tabGroup ul.tabHeaders li.selected a:link,
+div.tabGroup ul.tabHeaders li.selected a:visited,
+div.tabGroup ul.tabHeaders li.selected a:hover {
+  background: #fff; }
+
+div.tabGroup ul.tabHeaders a.selected,
+div.tabGroup ul.tabHeaders a.selected:link,
+div.tabGroup ul.tabHeaders a.selected:visited,
+div.tabGroup ul.tabHeaders a.selected:hover {
+  background: #fff; }
+
+.pa-roleContentMenu li a.allowedButton.selected {
+  background-color: #008700;
+  border: 2px solid #015701;
+  color: white;
+  background: url("./images/portlet-images/icon/tick.png") 8px 10px no-repeat #008700; }
+
+.pa-roleContentMenu li a.allowedButton.byInheritance.selected {
+  background: url("./images/portlet-images/icon/white_check.gif") 8px 10px no-repeat #008700; }
+
+.pa-roleContentMenu li a.notallowedButton.selected {
+  background-color: #464646;
+  border: 2px solid #790000;
+  color: white;
+  background: url("./images/portlet-images/icon/delete.png") 8px 10px no-repeat #464646; }
+
+.pa-roleContentMenu li a.notallowedButton.selected .pointer {
+  border-left: 16px solid #464646; }
+
+.pa-roleContentMenu li a.notallowedButton.selected .pointerBorder {
+  border-left: 18px solid #790000; }
+
+.selected .pointer {
+  border-bottom: 16px solid transparent;
+  border-top: 16px solid transparent;
+  border-left: 16px solid #008700; }
+
+.selected .pointerBorder {
+  border-bottom: 18px solid transparent;
+  border-top: 18px solid transparent;
+  border-left: 18px solid #015701; }
+
+.availablePage:hover .hoverHint, a.availableLayout:hover .hoverHint, .PageLayoutPanel .availableLayout.selected .hoverHint {
+  color: #575757; }
+
+.PageLayoutPanel .availableLayout.selected {
+  Border: 1px solid #015627;
+  background-color: #f0ffd9;
+  cursor: none; }
+
+.buttonBar {
+  background-color: #ddd; }
+
+.buttonBarCentered {
+  background-color: #ddd; }
+
+.buttonBarCenteredVer2 {
+  background-color: #bacddb; }
+
+.buttonBarCenteredVer2 input {
+  padding: 3px 15px; }
+
+.buttonBarCenteredVer2 input.enhanced {
+  font-weight: bold; }
+
+.groupedGrid {
+  border-bottom: solid 1px #ddd;
+  background: #cdcdcd; }
+
+.groupedGrid thead, .groupedGrid .ghead {
+  background: #cdcdcd;
+  font-weight: bold; }
+
+.groupedGrid thead tbody {
+  background: #cdcdcd; }
+
+.groupedGrid th {
+  background: #ddd; }
+
+.groupedGrid tfoot, .subheader, .subfooter {
+  background: #ddd; }
+
+.groupedGrid tfoot tbody {
+  background: #dddddd; }
+
+.groupedGrid_VerticalHeader {
+  background: #ddd; }
+
+.groupedGrid tr.subGroup td {
+  font-weight: bold;
+  border-bottom: solid 0px #000; }
+
+.groupedGrid tr.subItem td {
+  border-top: dashed 1px #cdcdcd; }
+
+.groupedGrid th a,
+.groupedGrid th a:link,
+.groupedGrid th a:visited {
+  color: #000; }
+
+.groupedGrid th a:hover {
+  color: #666; }
+
+.groupedGrid tbody {
+  background: #fff; }
+
+.groupedGrid tbody tr td.highlight {
+  background: #DAE3F2; }
+
+.groupedGrid tbody tr.alt td.highlight {
+  background: #C4D2EA; }
+
+.groupedGrid tbody tr.highlight {
+  background: #cedbe9; }
+
+.groupedGrid tbody tr.althighlight {
+  background: #F1EFBE; }
+
+.groupedGrid tbody tr td.alt {
+  background: #e5e5e5; }
+
+.groupedGrid tbody tr.alt td.alt {
+  background: #d6d6d6; }
+
+.groupedGrid thead tr th.highlight {
+  background: #000;
+  color: #fff; }
+
+.groupedGrid .error {
+  color: red; }
+
+.groupedGrid .disable {
+  color: #666; }
+
+.groupedGrid .disable td input {
+  color: #666; }
+
+.groupedGrid .disable td a:link {
+  color: #666; }
+
+.groupedGrid .disable td a:visited {
+  color: #666; }
+
+.groupedGrid .disable td a:active {
+  color: #666; }
+
+.groupedGrid .innerTable {
+  background: #cdcdcd; }
+
+.cal img {
+  cursor: pointer; }
+
+div.originalDiv {
+  border: 1px solid black;
+  background-color: white; }
+
+.hint {
+  background-color: #ebebeb;
+  border: 1px solid #DEDEDE; }
+
+.pToolbar ul {
+  border-bottom: 1px solid #ccc; }
+
+/* Styles for Menu Items */
+.pToolbar a,
+.pToolbar a:link,
+.pToolbar a:visited {
+  color: #fff;
+  background: #4870AC;
+  /* IE6 needs this */ }
+
+.pToolbar .menu a.hasKids {
+  background: #4870AC url(./images/toolbar_rightarrow.gif) center right no-repeat; }
+
+.pToolbar a:hover,
+.pToolbar a.active,
+.pToolbar .pTool a:hover,
+.pToolbar .pTool a.active {
+  color: #fff;
+  background-color: #3366cc; }
+
+/* End */
+.pToolbar {
+  background: #4870AC;
+  color: #fff;
+  border-top: solid 1px #fff; }
+
+.pToolbar .pTool {
+  border-right: solid 1px #fff; }
+
+.pToolbar .menu a,
+.pToolbar .menu a:link,
+.pToolbar .menu a:visited {
+  border: 1px solid #ccc; }
+
+.pToolbar li.off a,
+.pToolbar li.off a:link,
+.pToolbar li.off a:visited,
+.pToolbar li.off a:hover,
+.pToolbar li.off a.active,
+.pToolbar .pTool li.off a:hover,
+.pToolbar .pTool li.off a.active {
+  background-color: #B8BCC4;
+  color: #6E6E6E; }
+
+.cpHeader {
+  color: #ffffff;
+  background-color: #6699ff; }
+
+.cpBody {
+  background-color: #fcfcfc; }
+
+.cpLbl {
+  color: #000099; }
+
+.cpTxt {
+  color: #006600; }
+
+div.cp div.cpHead {
+  background: #ddd; }
+
+.dateRangeEdit div.opt a,
+.dateRangeEdit div.opt a:link,
+.dateRangeEdit div.opt a:visited {
+  color: #000; }
+
+.dateRangeEdit div.opt a:hover {
+  color: Blue; }
+
+.dateRangeEdit div.opt label:hover {
+  color: Blue; }
+
+#AccessiblityPopup .optionContainer span {
+  background: url("../Images/accessbility-icons.png") no-repeat scroll left top transparent; }
+
+.contentTabs ul {
+  border-bottom: 1px solid #A4A4A4; }
+
+.contentTabs li {
+  border: solid 1px #A4A4A4;
+  border-bottom: none;
+  background: #e1e1e1; }
+
+.contentTabs li.selected {
+  border-color: #A4A4A4;
+  background: #ffffff; }
+
+div.tabbox {
+  border-color: #A4A4A4; }
+
+div.thumbDiv {
+  border: 1px solid black;
+  padding: 2px;
+  float: left;
+  z-index: 2; }
+
+div#action {
+  border: 1px solid black;
+  background-color: #EAEAEA; }
+
+.multiUp table {
+  background: #eee; }
+
+.multiUp table thead {
+  background: #ccc; }
+
+#tblUserSelector .largehint {
+  background-color: #EEEEEE;
+  border: 1px solid #888888; }
+
+#tblUserSelector #userSelectorCell .userlistTitleCell {
+  background-color: #D5D5D5; }
+
+.error {
+  color: #D33A35;
+  font-weight: bold; }
+
+.glyphicons.glyphicons-circle-minus.delete-ordered-item {
+  color: #D33A35; }
+
+.glyphicon.glyphicon-ok.approve-ordered-item {
+  color: #417505; }
+
+.multi-file-upload .header-row {
+  background-color: #DEDEDE; }
+
+.MyPagesSetup .glyphicons.glyphicons-circle-arrow-right, .MyPagesSetup .glyphicons.glyphicons-circle-arrow-left {
+  color: #265B8C; }
+
+.RssPortlet .rss-folder {
+  color: #265B8C; }
+
+.RssPortlet .custom-icon.icon-rss {
+  color: #265B8C; }
+
+.RssPortlet .categories-and-feed-header-row {
+  color: #265B8C; }
+
+.RssPortlet .categories-and-feed, .RssPortlet .rss-feed-item-alt-row {
+  background-color: #EEEEEE; }
+
+.RssPortlet .item-header {
+  background-color: #D8D8D8; }
+
+.RssPortlet .category-header {
+  color: #000000; }
+
+.forums-portlet .single-post-container .original-post-row a {
+  color: #fff; }
+
+.forums-portlet .alternate-post {
+  background-color: whitesmoke; }
+
+.forums-portlet .original-post.alternate-post {
+  background-color: #d7dfec; }
+
+.forums-portlet .original-post {
+  background-color: #d7dfec; }
+
+.forums-portlet .unread-post {
+  background-color: #eaf9e6; }
+
+.forums-portlet .requires-approval,
+.forums-portlet .original-post.requires-approval,
+.forums-portlet .unread-post.requires-approval,
+.forums-portlet .original-post.unread-post.requires-approval {
+  background-color: #fffde5; }
+
+.forums-portlet .soft-background.original-post-row.primary-background {
+  background-color: #265B8C; }
+
+/* 
+--  Portlet mobile color specific styles
+--  Create another file to override these styles if needed
+*/
+/* 
+--  Admin color specific styles
+--  Create another file to override these styles if needed
+*/
+.admin-menu .actions-menu {
+  background: #265B8C; }
+  .admin-menu .actions-menu a {
+    color: #fff; }
+.admin-menu .actions-menu.drag-menu {
+  background-color: #DEDEDE; }
+  .admin-menu .actions-menu.drag-menu a {
+    color: #265B8C; }
+
+.ui-sortable .drag-header h3, .ui-sortable .drag-header a {
+  color: #fff; }
+
+.drag-list.empty-List {
+  background-color: #DEDEDE; }
+
+.portlet.drag-Content {
+  border: 2px dashed #ACACAC; }
+
+#editPortletPopup .Content .portletRename input[type="text"].error {
+  border: 1px dotted red; }
+
+#editPortletPopup .Content #diretLinkCollapser {
+  color: #000; }
+
+#DeleteShortcutPopup .Content .sharedFrom a {
+  color: black; }
+
+#DeleteShortcutPopup .Content .deletePortlet.notActive, .DeletePagePanel .deleteButtonPanel .deletePortlet.notActive {
+  color: gray !important; }
+
+.DeletePagePanel .header {
+  background-color: #EFEFEF; }
+
+.DeletePagePanel .warning-info {
+  background: url("./images/admin/Warning.gif") no-repeat scroll 15px 15px #FFFEE0; }
+
+.DeletePagePanel .deleteButtonPanel div {
+  background-color: #FFDADA;
+  border: 1px solid #8B2323; }
+
+.DeletePagePanel .deleteButtonPanel div a {
+  background-color: #FFFFFF;
+  border: 1px solid black; }
+
+#AccessiblityPopup .Content li .downButton .icon {
+  background: transparent url(./images/portlet-images/icon/arrow_down.gif) 0 0 no-repeat; }
+
+#AccessiblityPopup .Content li .upButton .icon {
+  background: transparent url(./images/portlet-images/icon/arrow_up.gif) 0 0 no-repeat; }
+
+#AccessiblityPopup .optionContainer span {
+  background: url("./images/admin/accessbility-icons.png") no-repeat scroll left top transparent; }
+
+.PageOptionsPopup .ui-dialog-content .link-info {
+  background: url("./images/portlet-images/icon/exclamation.png") no-repeat scroll 8px 0 #EFEFEF; }
+
+.PageOptionsPopup .ui-dialog-content a, .PageOptionsPopup .ui-dialog-content a:link, .PageOptionsPopup .ui-dialog-content a:visited {
+  color: #003663; }
+
+.PageOptionsPopup .ui-dialog-content .pheader {
+  background-color: #EFEFEF; }
+
+#directLinkPopup, #deletePagePopup, #editPortletPopup, #DeletePortletPopup, #DeleteShortcutPopup, #AccessiblityPopup {
+  background-color: #EFEFEF;
+  border: 1px solid gray;
+  color: #222222; }
+
+.settings-wrapper .inner-settings-wrapper .innerModal,
+.pageOptionsPanel .innerModal,
+.preferencesPanel .inner-settings-wrapper .innerModal {
+  background-color: white !important; }
+
+.settings-wrapper a,
+.preferencesPanel a,
+.pageOptionsPanel .PageOptionsInnerBody a, #editPortletPopup .Content a, #DeleteShortcutPopup .Content a, #closePopupLink {
+  color: #003663; }
+
+.settings-wrapper .saveButtonContainer,
+.preferencesPanel .saveButtonContainer,
+#AccessiblityPopup .saveButtonContainer {
+  background-color: #D6E2FB;
+  border: 1px solid #39527B; }
+
+.settings-wrapper .inner-settings-wrapper .cancelButtonContainer,
+.preferencesPanel .inner-settings-wrapper .cancelButtonContainer,
+#AccessiblityPopup .cancelButtonContainer {
+  background-color: #EFEFEF;
+  border-top: 1px solid #CACACA;
+  border-right: 1px solid #CACACA;
+  border-bottom: 1px solid #CACACA; }
+
+.settings-wrapper.inner-settings-wrapper .modalPopup,
+.preferencesPanel.inner-settings-wrapper .modalPopup,
+.pageAccessPanel .inner-settings-wrapper .modalPopup,
+.pageOptionsPanel .inner-settings-wrapper .modalPopup {
+  background-color: #BABABA; }
+
+.settings-wrapper .modalDiv,
+.preferencesPanel .modalDiv,
+.pageAccessPanel .inner-settings-wrapper .modalDiv {
+  border: 1px solid black;
+  background-color: #FFF; }
+
+.settings-wrapper .modalHeadingImg,
+.preferencesPanel .modalHeadingImg,
+.pageAccessPanel .inner-settings-wrapper .modalHeadingImg,
+.pageOptionsPanel .inner-settings-wrapper .modalHeadingImg, .ui-dialog-content .modalHeadingImg {
+  background-image: url("./images/admin/16/close-popup.png"); }
+
+.settings-wrapper .modalHeading .icon,
+.preferencesPanel .modalHeading .icon {
+  background-image: url("./images/admin/16/cog_edit.png"); }
+
+.settings-wrapper .inner-settings-wrapper .modalHeading,
+.preferencesPanel .inner-settings-wrapper .modalHeading {
+  background-color: white; }
+
+.settings-wrapper .inner-settings-wrapper .inner-settings-wrapper,
+.preferencesPanel .inner-settings-wrapper .inner-settings-wrapper {
+  background-color: #EFEFEF;
+  border: 1px solid #B2B2B2; }
+
+.settings-wrapper .inner-settings-wrapper div.modalButtons,
+.preferencesPanel .inner-settings-wrapper div.modalButtons,
+#AccessiblityPopup div.modalButtons {
+  background-color: #EFEFEF; }
+
+.settings-wrapper .portletSelection,
+.preferencesPanel .portletSelection {
+  border: 1px solid #479997;
+  background-color: #f0f6ff; }
+
+.no-operations.info .icon {
+  background: url("./images/portlet-images/icon/exclamation.png") no-repeat scroll 8px 0 transparent; }
+
+.allowedButton {
+  background: url("./images/portlet-images/icon/tick.png") 8px 10px no-repeat #f0ffd9; }
+
+.allowedButton.byInheritance {
+  background: url("./images/portlet-images/icon/white-tick-16.png") 8px 10px no-repeat #f0ffd9; }
+
+.notallowedButton {
+  background: url("./images/portlet-images/icon/delete.png") 8px 10px no-repeat #efefef; }
+
+.pageAccessTitle.cantAccess {
+  background: url("./images/portlet-images/icon/delete.png") no-repeat scroll 8px 4px #ffffff; }
+
+.pageAccessTitle.byInheritanceAccess {
+  background: url("./images/portlet-images/icon/white_check_large.gif") no-repeat scroll 8px 0 #ffffff; }
+
+.PageLayoutPanel .custom-layout .availableLayout.one_column.readonly .hoverHint {
+  color: #575757; }
+
+.PageLayoutPanel .custom-layout .availableLayout.one_column.readonly .layoutType {
+  color: black; }
+
+.PageLayoutPanel .custom-layout .availableLayout.one_column.readonly {
+  border: 1px solid #015627;
+  background-color: #f0ffd9; }
+
+.PageLayoutPanel .custom-layout .pre-title {
+  color: #575757; }
+
+.PageLayoutPanel .custom-layout input[type='submit'] {
+  color: white;
+  background-color: #002057;
+  border: 1px solid #00164f; }
+
+.PageLayoutPanel .availableLayout.one_column.readonly {
+  border: 1px solid #003663;
+  background-color: #e5eefe; }
+
+.PageLayoutPanel a.availableLayout .description {
+  color: black; }
+
+.PageLayoutPanel .header {
+  background-color: white; }
+
+.PageLayoutPanel .description a {
+  color: #265B8C; }
+
+.PageLayoutPanel .backButton {
+  color: #265B8C; }
+
+.PageLayoutPanel .custom-layout .availableLayout.one_column.readonly .hoverHint {
+  color: #575757; }
+
+.PageLayoutPanel .custom-layout .availableLayout.one_column.readonly .layoutType {
+  color: black; }
+
+.pageAccessPanel .inner-settings-wrapper .innerModal,
+.preferencesPanel .inner-settings-wrapper .innerModal {
+  background-color: white; }
+
+.pageAccessPanel .inner-settings-wrapper .topBackButton {
+  color: #004A80; }
+
+.pageAccessPanel .backButton, .pageOptionsPanel .backButton {
+  color: #004a80; }
+
+.pageAccessPanel .roleManager .roleOptions .addPeople-link.hasMembers a {
+  background-color: white; }
+
+.pageAccessPanel .roleManager .roleOptions .addPeople-link a {
+  color: #254a6f;
+  background-color: #ebf4ff;
+  border: 1px solid #24716b; }
+
+.pageAccessPanel .roleManager .roleOptions .addOthersRoles-link {
+  color: #254a6f; }
+
+.pageAccessPanel .roleManager .expandAll {
+  color: black; }
+
+.pageAccessRoleMenu .AddRoleContainer a {
+  color: #003663; }
+
+.pageAccessRoleMenu .AddRoleContainer {
+  color: #575757; }
+
+.pageAccessRoleMenu .AddRoleContainer.noRoles {
+  color: #464646; }
+
+.pa-roleContentMenu {
+  border: 1px solid #B9B9B9; }
+
+.pa-roleContentMenu li.heading {
+  background-color: #cecfce;
+  border-bottom: 1px solid #b9b9b9; }
+
+.pa-roleContentMenu li a {
+  border-top: 1px solid white;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+.accessActions {
+  background-color: #FFFFFF;
+  border: 1px solid #B9B9B9; }
+
+.accessActions.canAccess {
+  background-color: #f0ffd9; }
+
+.accessActions.canAccess a.portletAction.disabled, .accessActions.canAccess a.portletAction.enabled {
+  background-color: #f0ffd9; }
+
+.accessActions .pageAccessActionTitle.disable {
+  border-top: gray 1px dashed; }
+
+.accessActions.adminPanel .exclamation {
+  background: url("./images/portlet-images/icon/exclamation.png") no-repeat scroll 8px 0 white; }
+
+.accessActions.adminPanel header {
+  font-size: 1.3em; }
+
+.accessActions.adminPanel a {
+  color: #0000c4; }
+
+.accessActions.adminPanel {
+  color: #363636; }
+
+.accessActions.noSelection .warning {
+  background: url("./images/portlet-images/icon/alert.png") no-repeat scroll 8px 0 #E2E2E2; }
+
+.accessActions.noSelection .pointer {
+  border-bottom: 16px solid transparent;
+  border-right: 16px solid #E2E2E2;
+  border-top: 16px solid transparent; }
+
+.accessActions.noSelection {
+  background-color: #E2E2E2; }
+
+.portletAccessDescription {
+  color: #575757; }
+
+.portletActions li a.portletAction.enabled {
+  background: url("./images/portlet-images/icon/tick.png") no-repeat scroll 8px 0 #FFFFFF;
+  color: black; }
+
+.portletActions li a.portletAction.disabled {
+  color: #790000;
+  background: url("./images/portlet-images/icon/delete.png") no-repeat scroll 8px 0 #ffffff; }
+
+.permissionsTitle {
+  color: #464646; }
+
+.permissionsTitle .subTitle {
+  color: #898989; }
+
+.pageOptionsPanel .PageOptionsHeader .description a {
+  color: #003663; }
+
+.pageOptionsPanel .PageOptionsBody {
+  background-color: white !important; }
+
+.pageOptionsPanel .PageOptionsBody .devider, #editPortletPopup .devider, #DeleteShortcutPopup .devider, .PageLayoutPanel .devider {
+  border-top: 1px dashed #B5B5B5; }
+
+.pageOptionsPanel .actions .deletePage, #editPortletPopup .Content .deletePortlet, #DeleteShortcutPopup .Content .deletePortlet {
+  background-color: #FFFEE0;
+  border: 1px solid #790000;
+  color: #790000 !important; }
+
+.pageOptionsPanel .actions .deletePage.disabled {
+  color: #575757 !important; }
+
+.pageOptionsPanel .actions .deletePage .disabledDeleteButton {
+  color: black; }
+
+.pageOptionsPanel .layout {
+  background: url("./images/admin/pageLayout.png") 0 0 no-repeat; }
+
+.pageOptionsPanel .layout.multiPorltet .pagePortlets.shortcuts div div a {
+  color: black !important; }
+
+.pageOptionsPanel .layout.multiPorltet .pagePortlets.shortcuts a:link {
+  color: black !important; }
+
+.pageOptionsPanel .layout.multiPorltet .pagePortlets .portletDisplayName {
+  color: black; }
+
+.pageOptionsPanel .PageOptionsInnerBody .pageOptionsLinks .title {
+  color: #575757; }
+
+.pageOptionsPanel .pageRenaming .outsidePortal {
+  color: #003663; }
+
+.pageOptionsPanel .pageRenaming .content .validator {
+  color: red; }
+
+.pageOptionsPanel .pageRenaming .renameButton {
+  background-color: #FFFFFF;
+  border: 1px solid black; }
+
+.pageOptionsPanel .pageRenaming .renameButton:hover {
+  background-color: #D6E2FB;
+  border: 1px solid #39527B; }
+
+.pageOptionsPanel .modalHeading {
+  background-color: white !important; }
+
+.PageOptionsInnerBody .layoutOptions .content.one_column, .PageLayoutPanel .availableLayout.one_column .icon {
+  background-image: url(./images/admin/layout_icon-1.gif); }
+
+.PageOptionsInnerBody .layoutOptions .content.two_column_rwide, .PageLayoutPanel .availableLayout.two_column_rwide .icon {
+  background-image: url(./images/admin/layout_icon-1.gif); }
+
+.PageOptionsInnerBody .layoutOptions .content.three_column_rwide, .PageLayoutPanel .availableLayout.three_column_rwide .icon {
+  background-image: url(./images/admin/layout_icon-1.gif); }
+
+.PageOptionsInnerBody .layoutOptions .content.two_column_even, .PageLayoutPanel .availableLayout.two_column_even .icon {
+  background-image: url(./images/admin/layout_icon-2.gif); }
+
+.PageOptionsInnerBody .layoutOptions .content.two_column_lwide, .PageLayoutPanel .availableLayout.two_column_lwide .icon {
+  background-image: url(./images/admin/layout_icon-3.gif); }
+
+.PageOptionsInnerBody .layoutOptions .content.three_column_mwide, .PageLayoutPanel .availableLayout.three_column_mwide .icon {
+  background-image: url(./images/admin/layout_icon-6.gif); }
+
+.PageOptionsInnerBody .layoutOptions .content.side_by_side_with_header, .PageLayoutPanel .availableLayout.side_by_side_with_header .icon {
+  background-image: url(./images/admin/layout_icon-2a.gif); }
+
+.PageOptionsInnerBody .layoutOptions .content.blog_style_header, .PageLayoutPanel .availableLayout.blog_style_header .icon {
+  background-image: url(./images/admin/layout_icon-3a.gif); }
+
+.PageOptionsInnerBody .layoutOptions .content.three_column_even, .PageLayoutPanel .availableLayout.three_column_even .icon {
+  background-image: url(./images/admin/layout_icon-4.gif); }
+
+.PageOptionsInnerBody .layoutOptions .content.three_column_lwide, .PageLayoutPanel .availableLayout.three_column_lwide .icon {
+  background-image: url(./images/admin/layout_icon-5.gif); }
+
+.MainGroupListings .footer {
+  background: none repeat scroll 0 0 transparent;
+  color: #575757; }
+
+.MainGroupListings .header, .AddPageHeader .header {
+  background: none repeat scroll 0 0 transparent; }
+
+.pageDescript {
+  color: #636363; }
+
+ul.PageGroupListView h2 {
+  color: #004a80; }
+
+ul.PageGroupListView .pageDescript {
+  color: #636363; }
+
+a.availablePage, a.unavailablePage, a.availableLayout {
+  border: 1px solid transparent; }
+
+a.availablePage:hover, a.availableLayout:hover {
+  border: 1px solid #003663;
+  background-color: #e5eefe; }
+
+.availablePage h2, a.availableLayout h2 {
+  color: black; }
+
+.availablePage:hover h2 a.availableLayout:hover h2 {
+  color: blue; }
+
+.unavailablePage .pageType {
+  color: #636363; }
+
+.rssReaderPage .icon {
+  background-image: url(./images/admin/32/feed.png); }
+
+.contentImportPage .icon {
+  background-image: url(./images/admin/32/course_content_import_32.png); }
+
+.learningToolsPage .icon {
+  background-image: url(./images/admin/32/measure.png); }
+
+.rosterPage .icon {
+  background-image: url(./images/admin/32/book_addresses.png); }
+
+.courseOrganizerPage .icon {
+  background-image: url(./images/admin/32/course-organizer-32.png); }
+
+.chatPage .icon {
+  background-image: url(./images/admin/32/user_comment.png); }
+
+.calendarPage .icon {
+  background-image: url(./images/admin/32/calendar.png); }
+
+.free-formContentPage .icon {
+  background-image: url(./images/admin/32/course_content_import_32.png); }
+
+.gradebookPage .icon {
+  background-image: url(./images/admin/32/gradebook_32.png); }
+
+.attendancePage .icon {
+  background-image: url(./images/admin/32/attendance_32.png); }
+
+.courseWorkPage .icon {
+  background-image: url(./images/admin/32/coursework_32.png); }
+
+.handoutsPage .icon {
+  background-image: url(./images/admin/32/handouts_32.png); }
+
+.blogPage .icon {
+  background-image: url(./images/admin/32/blogs_news_32.png); }
+
+.formsPage .icon {
+  background-image: url(./images/admin/32/forms_32.png); }
+
+.bookmarksPage .icon {
+  background-image: url(./images/admin/32/bookmarks_32.png); }
+
+.forumsPage .icon {
+  background-image: url(./images/admin/32/forums_32.png); }
+
+.courseInfoPage .icon {
+  background-image: url(./images/admin/32/course-info-32.png); }
+
+.readingsPage .icon {
+  background-image: url(./images/admin/32/readings_32.png); }
+
+.onlineMeetingPage .icon {
+  background-image: url(./images/admin/32/meeting-32.png); }
+
+.moreOptionsPanel .optionsHeader {
+  border-top: 1px dashed #b5b5b5;
+  color: #575757; }
+
+.ExpandablePanel {
+  color: #575757; }
+
+.MetaControl {
+  color: Black; }
+
+.SubTable_Footer.ValidationError {
+  color: Red; }
+
+.rePositionItem {
+  background-color: #FFFFFF !important; }
+
+.rePositionItem > .portlet > .dragBar {
+  background-color: #DEDEDE; }
+
+.rePositionItem > .portlet > .dragBar p {
+  background-color: transparent; }
+
+.rePositionItem > .portlet > .dragBar p {
+  background: url("./images/admin/16/DragDrop.png") no-repeat scroll 8px 5px; }
+
+.rePositionItem .drag-header {
+  background-color: #265B8C; }
+
+.drag-disable {
+  opacity: 0.1; }
+
+.pageActions .ChangePermissions {
+  color: #0000c4; }
+
+a.pageAction, a.permissionChangeOfRoleForPage, a.permissionChangeOfRoleForPage.disable > span {
+  color: #0000C4; }
+
+a.pageAction.enable, a.permissionChangeOfRoleForPage.enable {
+  background-color: #f0ffd9;
+  border: 1px solid green;
+  background: url("./images/portlet-images/icon/enable.png") no-repeat scroll 0px 10px #F0FFD9;
+  color: green; }
+
+a.pageAction.disable {
+  background: url("./images/portlet-images/icon/delete.png") no-repeat scroll 8px 2px #FFFEE0;
+  border: 1px solid #790000; }
+
+a.permissionChangeOfRoleForPage.disable {
+  background: url("./images/portlet-images/icon/delete22x22.png") no-repeat scroll 8px 5px #FFFEE0;
+  border: 1px solid #790000; }
+
+a.permissionChangeOfRoleForPage.disable > span {
+  color: #790000; }
+
+.portletAccessDescription.exclamation {
+  background: url("./images/portlet-images/icon/exclamation.png") no-repeat scroll 0px 0 transparent; }
+
+.DialogWindow_OuterFrame {
+  border: 1px solid black;
+  background-color: White; }
+
+.DialogWindow_InnerFrame {
+  border: 1px solid gray; }
+
+.DialogWindow_Title {
+  background-color: #E2E2E2;
+  color: Black; }
+
+.DialogWindow_Background {
+  background-color: #DDDDDD;
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7; }
+
+.AsPopupView .selectUser .peoplechooser .pc-action .pc-more {
+  color: #265B8C; }
+
+.AsPopupView .selectUser .peoplechooser .pc-action .pc-prev {
+  color: #265B8C; }
+
+.AsPopupView .selectUser .peoplechooser .pc-action .pc-removeAll {
+  color: #265B8C; }
+
+.AsPopupView .selectUser .peoplechooser.pc-full .pc-filter span {
+  color: #575757; }
+
+.AsPopupView .selectRole .info .title, .AsPopupView .selectUser .info .title {
+  color: #575757; }
+
+.AsPopupView .selectRole .info .description, .AsPopupView .selectUser .info .description {
+  color: #575757; }
+
+.ui-widget-content a.save {
+  color: #fff; }
+
+.ui-widget-content a.cancel {
+  color: #265B8C; }
+
+.context-manager.roles-list .role-link.selected-role {
+  background-color: #265B8C; }
+  .context-manager.roles-list .role-link.selected-role a {
+    color: #fff; }
+
+.context-manager.roles-list .role-link.admin {
+  background-color: #417505; }
+  .context-manager.roles-list .role-link.admin a {
+    color: #fff; }
+
+.context-manager.roles-list li {
+  border: 1px solid #CCCCCC;
+  background-color: #F5F5F5; }
+
+/* 
+--  Admin mobile color specific styles
+--  Create another file to override these styles if needed
+*/
+/* 
+--  Button color specific styles
+--  Create another file to override these styles if needed
+*/
+.btn-grey {
+  background-color: #707070;
+  color: #FFFFFF; }
+
+.btn-white {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #CCCCCC; }
+
+/* 
+--  Navbar color specific styles
+--  Create another file to override these styles if needed
+*/
+.top-nav-bar {
+  background-color: #265B8C; }
+  .top-nav-bar .nav-container .link-scroll {
+    background: transparent; }
+  .top-nav-bar .nav-container .user-btn:focus,
+  .top-nav-bar .nav-container .search-btn:focus {
+    box-shadow: none; }
+  .top-nav-bar .nav-container .user-btn {
+    color: #DEDEDE; }
+  .top-nav-bar .nav-container .search-btn {
+    color: #265B8C; }
+  .top-nav-bar .nav-container .main-nav-submenu-container .popover {
+    background-color: #fff;
+    border: 1px solid #ccc; }
+  .top-nav-bar .nav-container .main-nav-submenu-container .user-login.popover {
+    color: #265B8C; }
+    .top-nav-bar .nav-container .main-nav-submenu-container .user-login.popover .init-user-login-btn,
+    .top-nav-bar .nav-container .main-nav-submenu-container .user-login.popover .init-logout-btn {
+      color: #265B8C;
+      background: none; }
+      .top-nav-bar .nav-container .main-nav-submenu-container .user-login.popover .init-user-login-btn:active,
+      .top-nav-bar .nav-container .main-nav-submenu-container .user-login.popover .init-logout-btn:active {
+        box-shadow: none; }
+  .top-nav-bar .nav-container .main-nav-submenu-container .user-login .input-group .input-group-addon {
+    color: #ababab;
+    background: #d1d1d1; }
+  .top-nav-bar .nav-container .main-nav-submenu-container .user-login .forgot-password-link {
+    color: #265B8C; }
+  .top-nav-bar .more-links-div {
+    background-color: #265B8C; }
+
+.main-crumbs {
+  color: #265B8C; }
+
+#mainCrumbs #emulation {
+  color: #575757; }
+
+/* 
+--  Navbar mobile color specific styles
+--  Create another file to override these styles if needed
+*/
+@media screen and (max-width: 1025px) {
+  .top-nav-bar .nav-container .link-scroll.vertical-menu {
+    background: #fff !important; }
+  .top-nav-bar .nav-container .link-scroll {
+    background: #fff; }
+    .top-nav-bar .nav-container .link-scroll .h-menu ul a {
+      color: #265B8C; }
+      .top-nav-bar .nav-container .link-scroll .h-menu ul a:hover {
+        background-color: transparent; }
+      .top-nav-bar .nav-container .link-scroll .h-menu ul a::after {
+        color: #DEDEDE; }
+  .top-nav-bar .nav-container .user-btn,
+  .top-nav-bar .nav-container .search-btn {
+    color: #fff; }
+  .top-nav-bar .nav-container .login-btn {
+    color: #fff;
+    background-color: transparent; }
+    .top-nav-bar .nav-container .login-btn:active, .top-nav-bar .nav-container .login-btn:focus {
+      outline: none;
+      box-shadow: none; }
+  .top-nav-bar .nav-container .main-nav-submenu-container {
+    background: #DEDEDE; }
+    .top-nav-bar .nav-container .main-nav-submenu-container .popover {
+      background-color: transparent;
+      border: none;
+      box-shadow: none; }
+    .top-nav-bar .nav-container .main-nav-submenu-container .user-login.popover {
+      color: #265B8C; }
+      .top-nav-bar .nav-container .main-nav-submenu-container .user-login.popover .init-user-login-btn,
+      .top-nav-bar .nav-container .main-nav-submenu-container .user-login.popover .init-logout-btn {
+        background-color: #265B8C;
+        color: #fff; }
+    .top-nav-bar .nav-container .main-nav-submenu-container .user-login ul .site-manager,
+    .top-nav-bar .nav-container .main-nav-submenu-container .user-login ul .account-info {
+      color: #265B8C; } }
+/* 
+--  Sidebar color specific styles
+--  Create another file to override these styles if needed
+*/
+.slide-menu-right {
+  background-color: #DEDEDE; }
+  .slide-menu-right .sidebar-link-title {
+    color: #265B8C; }
+    .slide-menu-right .sidebar-link-title a {
+      color: #265B8C; }
+  .slide-menu-right .navbar {
+    background-color: #DEDEDE;
+    border: none; }
+    .slide-menu-right .navbar li #pagePortlets a, .slide-menu-right .navbar li #myPages a, .slide-menu-right .navbar li #myGroups a {
+      color: #fff;
+      background-color: #265B8C; }
+      .slide-menu-right .navbar li #pagePortlets a:hover, .slide-menu-right .navbar li #myPages a:hover, .slide-menu-right .navbar li #myGroups a:hover {
+        color: #265B8C;
+        background-color: #fff; }
+    .slide-menu-right .navbar .quick-links {
+      border-top: 12px solid #fff; }
+
+/* 
+--  Sidebar mobile color specific styles
+--  Create another file to override these styles if needed
+*/
+@media screen and (max-width: 1025px) {
+  .slide-menu-right .navbar li {
+    border-top: 1px solid #ababab; }
+    .slide-menu-right .navbar li:last-child {
+      border-bottom: 1px solid #ababab; }
+  .slide-menu-right .navbar .tab-pane {
+    border-top: none !important; }
+  .slide-menu-right .navbar .slide-menu-toggle-btns-wrapper {
+    border-top: none; }
+  .slide-menu-right .navbar .slide-menu-toggle-btns li {
+    border: none; }
+    .slide-menu-right .navbar .slide-menu-toggle-btns li:first-child {
+      border-right: 1px solid #ababab; }
+    .slide-menu-right .navbar .slide-menu-toggle-btns li a {
+      color: #fff;
+      background: #265B8C; }
+  .slide-menu-right .navbar .slide-menu-toggle-btns .active a {
+    color: #265B8C;
+    background: transparent; }
+    .slide-menu-right .navbar .slide-menu-toggle-btns .active a:hover {
+      color: #fff;
+      background-color: #265B8C; }
+  .slide-menu-right .navbar .quick-links {
+    border: none !important; }
+
+  .slide-menu-btn {
+    background-color: #265B8C;
+    color: #fff; } }
+/* 
+--  Form colors specific styles
+--  Create another file to override these styles if needed
+*/
+.form-wrapper .form-icon {
+  color: #DEDEDE; }
+.form-wrapper .custom-form-control {
+  color: #5f5f5f; }
+
+legend {
+  color: #575757; }
+
+select[disabled] {
+  background-color: #DEDEDE; }
+
+/* 
+--  Card color specific styles
+--  Create another file to override these styles if needed
+*/
+.card-layout .card-set-wrapper {
+  border: 1px solid #DEDEDE; }
+.card-layout .masonry .card {
+  background-color: whitesmoke; }
+  .card-layout .masonry .card p {
+    color: #575757; }
+  .card-layout .masonry .card .wysiwygtext {
+    color: #575757; }
+  .card-layout .masonry .card a.title {
+    color: #265B8C; }
+  .card-layout .masonry .card .btn-primary {
+    border-right: 1px solid #fff; }
+  .card-layout .masonry .card .sub-info {
+    color: #575757; }
+.card-layout .masonry .leader-highlight {
+  background-color: #d9d9d9; }
+
+@media screen and (max-width: 992px) {
+  .card-layout .card-set-wrapper {
+    border: none; } }
+/* 
+--  Slide menu colors specific styles
+--  Create another file to override these styles if needed
+*/
+/* 
+--  Slide menu mobile colors specific styles
+--  Create another file to override these styles if needed
+*/
+@media screen and (max-width: 1025px) {
+  .slideout-wrapper.closed {
+    border-color: transparent; }
+
+  .slideout-wrapper.open {
+    border-color: #ababab;
+    transition: border-color 2s; }
+
+  .slideout-wrapper.closed .slideout-body,
+  .slideout-wrapper.open .slideout-body {
+    background: #f8f8f8; } }
+/* 
+--  Popovers colors specific styles
+--  Create another file to override these styles if needed
+*/
+.popover {
+  font-family: Open Sans; }
+
+/* 
+--  Alerts colors specific styles
+--  Create another file to override these styles if needed
+*/
+.alert-container.error {
+  border-color: #D33A35;
+  color: #D33A35;
+  background-color: #fefafa; }
+
+.alert-container.success {
+  border-color: #417505;
+  color: #417505;
+  background-color: #fcfffa; }
+
+.alert-container.feedback {
+  border-color: #265B8C;
+  color: #265B8C;
+  background-color: #f3f7fc; }
+
+.alert-container.warning {
+  border-color: #e5d300;
+  color: #575757;
+  background-color: #fffde5; }
+
+/* 
+--  Base layout specific styles
+--  Create another file to override these styles if needed
+*/
+#masthead {
+  margin: 0;
+  padding-top: 20px;
+  height: 65px;
+  position: relative; }
+  #masthead h1 {
+    margin: 0;
+    padding: 0 10px; }
+    #masthead h1 a {
+      background: transparent url(./images/logo.png) no-repeat;
+      display: block;
+      width: 220px;
+      height: 50px;
+      background-size: contain; }
+
+/* 
+--  Base mobile layout specific styles
+--  Create another file to override these styles if needed
+*/
+@media screen and (max-width: 1025px) {
+  #masthead {
+    top: 50px;
+    height: auto !important; }
+    #masthead h1 {
+      float: none;
+      text-align: center; }
+      #masthead h1 a {
+        margin: 0 auto; } }
+
+/*# sourceMappingURL=style.css.map */

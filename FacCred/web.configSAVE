@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.web>
+    <compilation debug="true" targetFramework="4.6.1">
+      <assemblies>
+        <add assembly="System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+      </assemblies>
+    </compilation>
+    <httpRuntime targetFramework="4.6.1" />
+    <identity impersonate="true" userName="sa" password="Dave22sa!" />
+  </system.web>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly>
+				<assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30AD4FE6B2A6AEED" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="WebGrease" publicKeyToken="31BF3856AD364E35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-1.6.5135.21930" newVersion="1.6.5135.21930" />
+			</dependentAssembly>
+
+      <dependentAssembly>
+        <assemblyIdentity name="System.Net.Http.Formatting" publicKeyToken="31BF3856AD364E35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+      </dependentAssembly>
+
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Http" publicKeyToken="31BF3856AD364E35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Owin" publicKeyToken="31BF3856AD364E35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-3.0.1.0" newVersion="3.0.1.0" />
+      </dependentAssembly>
+
+      <dependentAssembly>
+        <assemblyIdentity name="Iesi.Collections" publicKeyToken="aa95f207798dfdb4" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-4.0.0.4000" newVersion="4.0.0.4000" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="NHibernate" publicKeyToken="aa95f207798dfdb4" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-4.1.0.4000" newVersion="4.1.0.4000" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+
+  <connectionStrings>
+     <add name="ICSConnectionString" connectionString="Data Source=TUL-DRBREASHEAR\MSSQLSERVER01;Initial Catalog=ICS_NET;User ID=ICSNetUser;Password=DCyhDeuA;Max Pool Size=200" />
+    <!--<add name="ICSConnectionString" connectionString="User Id=ICSNetUser;password=DCyhDeuA;Initial Catalog=Test_ICS_NET;Data Source=pddb2\jics" />-->
+    
+  </connectionStrings>
+</configuration>

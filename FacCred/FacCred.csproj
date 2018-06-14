@@ -1,0 +1,1127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D25C104F-E9DF-4329-9F9E-B30FD9DE6C74}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FacCred</RootNamespace>
+    <AssemblyName>FacCred</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>14.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <UpgradeBackupLocation />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\Program Files\Jenzabar\ICS.NET\Portal\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CRM, Version=1.0.6344.30606, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Jenzabar\ICS.NET\Portal\bin\CRM.dll</HintPath>
+    </Reference>
+    <Reference Include="CUS.EX.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Jenzabar\ICS.NET\Portal\Portlets\CUS\FacCred\bin\Debug\CUS.EX.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="CUS.OdbcConnectionClass3">
+      <HintPath>..\..\..\JICS Training Class Nov2017\Day5\ERPPortlet5\bin\Debug\CUS.OdbcConnectionClass3.dll</HintPath>
+    </Reference>
+    <Reference Include="ERP.EX, Version=6.4.1.30609, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Jenzabar\ICS.NET\Portal\bin\ERP.EX.dll</HintPath>
+    </Reference>
+    <Reference Include="EX.DAL, Version=7.0.6345.38046, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Jenzabar\ICS.NET\Portal\bin\EX.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="EX.Data, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Jenzabar\ICS.NET\Portal\Portlets\CUS\FacCred\bin\Debug\EX.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.Common">
+      <HintPath>..\..\..\..\..\Program Files\Jenzabar\ICS.NET\Portal\bin\Jenzabar.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.ICS, Version=5.0.6344.30608, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Jenzabar\ICS.NET\Portal\bin\Jenzabar.ICS.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.Portal.Framework">
+      <HintPath>..\..\..\..\..\Program Files\Jenzabar\ICS.NET\Portal\bin\Jenzabar.Portal.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.Portal.Framework.Web">
+      <HintPath>..\..\..\..\..\Program Files\Jenzabar\ICS.NET\Portal\bin\Jenzabar.Portal.Framework.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.Portal.Web">
+      <HintPath>..\..\..\..\..\Program Files\Jenzabar\ICS.NET\Portal\bin\Jenzabar.Portal.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="LiteralStringReplacer.Facade">
+      <HintPath>..\..\..\..\..\Program Files\Jenzabar\Go\bin\LiteralStringReplacer.Facade.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\ReportViewer\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Jenzabar\ICS.NET\Portal\bin\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cs\WidgetsNHibernate.cs" />
+    <Compile Include="DefaultView.ascx.cs">
+      <DependentUpon>DefaultView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultView.ascx.designer.cs">
+      <DependentUpon>DefaultView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DisciplinesNHibernate.cs" />
+    <Compile Include="Entities\NotesArchiveNHibernate.cs" />
+    <Compile Include="Entities\UserAccessNHibernate.cs" />
+    <Compile Include="ERPService.asmx.cs">
+      <DependentUpon>ERPService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FacCred.cs" />
+    <Compile Include="cs\PortletUserCntl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\ApprovalsModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\CatalogModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\CourseApprovalsModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\CoursesModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\CredentialsModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\DisciplineModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\DropDownModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\EDUEarnHistModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\FacultyApprovalsModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\FacultyModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\Interfaces\IApprovalsModel.cs" />
+    <Compile Include="Models\Interfaces\ICatalogModel.cs" />
+    <Compile Include="Models\Interfaces\ICourseApprovalsModel.cs" />
+    <Compile Include="Models\Interfaces\ICoursesModel.cs" />
+    <Compile Include="Models\Interfaces\ICredentialsModel.cs" />
+    <Compile Include="Models\Interfaces\IDisciplineModel.cs" />
+    <Compile Include="Models\Interfaces\IDropDowns.cs" />
+    <Compile Include="Models\Interfaces\IEDUEarnHistModel.cs" />
+    <Compile Include="Models\Interfaces\IFacultyApprovalsModel.cs" />
+    <Compile Include="Models\Interfaces\IFacultyModel.cs" />
+    <Compile Include="Models\Interfaces\IMainMenuModel.cs" />
+    <Compile Include="Models\Interfaces\IUserAccessModel.cs" />
+    <Compile Include="Models\MainMenuModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entities\NHibernateFactory.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entities\NotesNHibernate.cs" />
+    <Compile Include="Models\NoteArchiveModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\NoteModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\UserAccessDirectModel.cs" />
+    <Compile Include="Models\UserAccessModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presenters\ApprovalsPresenter.cs" />
+    <Compile Include="Presenters\CatalogPresenter.cs" />
+    <Compile Include="Presenters\CourseApprovalsPresenter.cs" />
+    <Compile Include="Presenters\CoursesPresenter.cs" />
+    <Compile Include="Presenters\CredentialsPresenter.cs" />
+    <Compile Include="Presenters\DisciplinePresenter.cs" />
+    <Compile Include="Presenters\DropDownPresenter.cs" />
+    <Compile Include="Presenters\EDUEarnHistPresenter.cs" />
+    <Compile Include="Presenters\FacultyApprovalsPresenter.cs" />
+    <Compile Include="Presenters\FacultyPresenter.cs" />
+    <Compile Include="Presenters\MainMenuPresenter.cs" />
+    <Compile Include="Presenters\NoteArchivePresenter.cs" />
+    <Compile Include="Presenters\NotePresenter.cs" />
+    <Compile Include="Presenters\UserAccessDirectPresenter.cs" />
+    <Compile Include="Presenters\UserAccessPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\FACCRED_SSRS_Faculty.aspx.cs">
+      <DependentUpon>FACCRED_SSRS_Faculty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\FACCRED_SSRS_Faculty.aspx.designer.cs">
+      <DependentUpon>FACCRED_SSRS_Faculty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MyReportServerCredentials.cs" />
+    <Compile Include="Reports\ReportParameter.cs" />
+    <Compile Include="Reports\ReportSearchResult.cs" />
+    <Compile Include="Roles.cs" />
+    <Compile Include="Screens\ACADCREDScreen.ascx.cs">
+      <DependentUpon>ACADCREDScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\ACADCREDScreen.ascx.designer.cs">
+      <DependentUpon>ACADCREDScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AdminNoteTypesScreen.ascx.cs">
+      <DependentUpon>AdminNoteTypesScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\AdminNoteTypesScreen.ascx.designer.cs">
+      <DependentUpon>AdminNoteTypesScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AdminScreen.ascx.cs">
+      <DependentUpon>AdminScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\AdminScreen.ascx.designer.cs">
+      <DependentUpon>AdminScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ApprovalNoteScreen.ascx.cs">
+      <DependentUpon>ApprovalNoteScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\ApprovalNoteScreen.ascx.designer.cs">
+      <DependentUpon>ApprovalNoteScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ApprovalsScreen.ascx.cs">
+      <DependentUpon>ApprovalsScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\ApprovalsScreen.ascx.designer.cs">
+      <DependentUpon>ApprovalsScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ApprovalUpdateScreen.ascx.cs">
+      <DependentUpon>ApprovalUpdateScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\ApprovalUpdateScreen.ascx.designer.cs">
+      <DependentUpon>ApprovalUpdateScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\BlankScreen.ascx.cs">
+      <DependentUpon>BlankScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\BlankScreen.ascx.designer.cs">
+      <DependentUpon>BlankScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CatalogScreen.ascx.cs">
+      <DependentUpon>CatalogScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\CatalogScreen.ascx.designer.cs">
+      <DependentUpon>CatalogScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\COPYOLScreen.ascx.cs">
+      <DependentUpon>COPYOLScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\COPYOLScreen.ascx.designer.cs">
+      <DependentUpon>COPYOLScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CourseApprovalScreen.ascx.cs">
+      <DependentUpon>CourseApprovalScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\CourseApprovalScreen.ascx.designer.cs">
+      <DependentUpon>CourseApprovalScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CourseApprovalUpdateScreen.ascx.cs">
+      <DependentUpon>CourseApprovalUpdateScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\CourseApprovalUpdateScreen.ascx.designer.cs">
+      <DependentUpon>CourseApprovalUpdateScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CoursesPartial.ascx.cs">
+      <DependentUpon>CoursesPartial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\CoursesPartial.ascx.designer.cs">
+      <DependentUpon>CoursesPartial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CoursesScreen.ascx.cs">
+      <DependentUpon>CoursesScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\CoursesScreen.ascx.designer.cs">
+      <DependentUpon>CoursesScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CredentialsPartial.ascx.cs">
+      <DependentUpon>CredentialsPartial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\CredentialsPartial.ascx.designer.cs">
+      <DependentUpon>CredentialsPartial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CredentialsScreen.ascx.cs">
+      <DependentUpon>CredentialsScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\CredentialsScreen.ascx.designer.cs">
+      <DependentUpon>CredentialsScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CREDITScreen.ascx.cs">
+      <DependentUpon>CREDITScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\CREDITScreen.ascx.designer.cs">
+      <DependentUpon>CREDITScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DisciplineScreen.ascx.cs">
+      <DependentUpon>DisciplineScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\DisciplineScreen.ascx.designer.cs">
+      <DependentUpon>DisciplineScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DisciplineUpdateScreen.ascx.cs">
+      <DependentUpon>DisciplineUpdateScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\DisciplineUpdateScreen.ascx.designer.cs">
+      <DependentUpon>DisciplineUpdateScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\EDUEarnHistScreen.ascx.cs">
+      <DependentUpon>EDUEarnHistScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\EDUEarnHistScreen.ascx.designer.cs">
+      <DependentUpon>EDUEarnHistScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\EXCredentialsScreen.ascx.cs">
+      <DependentUpon>EXCredentialsScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\EXCredentialsScreen.ascx.designer.cs">
+      <DependentUpon>EXCredentialsScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FacultyApprovalScreen.ascx.cs">
+      <DependentUpon>FacultyApprovalScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\FacultyApprovalScreen.ascx.designer.cs">
+      <DependentUpon>FacultyApprovalScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FacultyApprovalUpdateScreen.ascx.cs">
+      <DependentUpon>FacultyApprovalUpdateScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\FacultyApprovalUpdateScreen.ascx.designer.cs">
+      <DependentUpon>FacultyApprovalUpdateScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FacultyNoteArchiveScreen.ascx.cs">
+      <DependentUpon>FacultyNoteArchiveScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\FacultyNoteArchiveScreen.ascx.designer.cs">
+      <DependentUpon>FacultyNoteArchiveScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FacultyNoteScreen.ascx.cs">
+      <DependentUpon>FacultyNoteScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\FacultyNoteScreen.ascx.designer.cs">
+      <DependentUpon>FacultyNoteScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FacultyScreen.ascx.cs">
+      <DependentUpon>FacultyScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\FacultyScreen.ascx.designer.cs">
+      <DependentUpon>FacultyScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\JunkScreen.ascx.cs">
+      <DependentUpon>JunkScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\JunkScreen.ascx.designer.cs">
+      <DependentUpon>JunkScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\LoadingScreen.ascx.cs">
+      <DependentUpon>LoadingScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\LoadingScreen.ascx.designer.cs">
+      <DependentUpon>LoadingScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\MainMenu.ascx.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\MainMenu.ascx.designer.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\NotesScreen.ascx.cs">
+      <DependentUpon>NotesScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\NotesScreen.ascx.designer.cs">
+      <DependentUpon>NotesScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\NotesUpdateScreen.ascx.cs">
+      <DependentUpon>NotesUpdateScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\NotesUpdateScreen.ascx.designer.cs">
+      <DependentUpon>NotesUpdateScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\OTHERQUALScreen.ascx.cs">
+      <DependentUpon>OTHERQUALScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\OTHERQUALScreen.ascx.designer.cs">
+      <DependentUpon>OTHERQUALScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\PXCodesScreen.ascx.cs">
+      <DependentUpon>PXCodesScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\PXCodesScreen.ascx.designer.cs">
+      <DependentUpon>PXCodesScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\PXCoursesScreen.ascx.cs">
+      <DependentUpon>PXCoursesScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\PXCoursesScreen.ascx.designer.cs">
+      <DependentUpon>PXCoursesScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ReportsScreen.ascx.cs">
+      <DependentUpon>ReportsScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\ReportsScreen.ascx.designer.cs">
+      <DependentUpon>ReportsScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\StatusScreen.ascx.cs">
+      <DependentUpon>StatusScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\StatusScreen.ascx.designer.cs">
+      <DependentUpon>StatusScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UnauthorizedScreen.ascx.cs">
+      <DependentUpon>UnauthorizedScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\UnauthorizedScreen.ascx.designer.cs">
+      <DependentUpon>UnauthorizedScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UpdateScreen.ascx.cs">
+      <DependentUpon>UpdateScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\UpdateScreen.ascx.designer.cs">
+      <DependentUpon>UpdateScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserAccessDirectScreen.ascx.cs">
+      <DependentUpon>UserAccessDirectScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\UserAccessDirectScreen.ascx.designer.cs">
+      <DependentUpon>UserAccessDirectScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserAccessDirectUpdateScreen.ascx.cs">
+      <DependentUpon>UserAccessDirectUpdateScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\UserAccessDirectUpdateScreen.ascx.designer.cs">
+      <DependentUpon>UserAccessDirectUpdateScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserAccessScreen.ascx.cs">
+      <DependentUpon>UserAccessScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\UserAccessScreen.ascx.designer.cs">
+      <DependentUpon>UserAccessScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserAccessUpdateScreen.ascx.cs">
+      <DependentUpon>UserAccessUpdateScreen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\UserAccessUpdateScreen.ascx.designer.cs">
+      <DependentUpon>UserAccessUpdateScreen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\NotesService.asmx.cs">
+      <DependentUpon>NotesService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\ApprovalsView.cs" />
+    <Compile Include="Views\CatalogView.cs" />
+    <Compile Include="Views\CourseApprovalsView.cs" />
+    <Compile Include="Views\CoursesView.cs" />
+    <Compile Include="Views\CredentialsView.cs" />
+    <Compile Include="Views\DisciplineView.cs" />
+    <Compile Include="Views\DropDownView.cs" />
+    <Compile Include="Views\EDUEarnHistView.cs" />
+    <Compile Include="Views\FacultyApprovalsView.cs" />
+    <Compile Include="Views\FacultyView.cs" />
+    <Compile Include="Views\Interfaces\IApprovalsView.cs" />
+    <Compile Include="Views\Interfaces\ICatalogView.cs" />
+    <Compile Include="Views\Interfaces\ICourseApprovalsView.cs" />
+    <Compile Include="Views\Interfaces\ICoursesView.cs" />
+    <Compile Include="Views\Interfaces\ICredentialsView.cs" />
+    <Compile Include="Views\Interfaces\IDisciplineView.cs" />
+    <Compile Include="Views\Interfaces\IDropDownView.cs" />
+    <Compile Include="Views\Interfaces\IEDUEarnHistView.cs" />
+    <Compile Include="Views\Interfaces\IFacultyApprovalsView.cs" />
+    <Compile Include="Views\Interfaces\IFacultyView.cs" />
+    <Compile Include="Views\Interfaces\IMainMenuView.cs" />
+    <Compile Include="Views\Interfaces\IUserAccessDirectView.cs" />
+    <Compile Include="Views\Interfaces\IUserAccessView.cs" />
+    <Compile Include="Views\MainMenuView.cs" />
+    <Compile Include="Views\NoteArchiveView.cs" />
+    <Compile Include="Views\NoteView.cs" />
+    <Compile Include="Views\UserAccessDirectView.cs" />
+    <Compile Include="Views\UserAccessView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\DataTables\css\autoFill.bootstrap.css" />
+    <Content Include="Content\DataTables\css\autoFill.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\autoFill.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.dataTables.css" />
+    <Content Include="Content\DataTables\css\autoFill.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.foundation.css" />
+    <Content Include="Content\DataTables\css\autoFill.foundation.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.jqueryui.css" />
+    <Content Include="Content\DataTables\css\autoFill.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.semanticui.css" />
+    <Content Include="Content\DataTables\css\autoFill.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\buttons.dataTables.css" />
+    <Content Include="Content\DataTables\css\buttons.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\buttons.foundation.css" />
+    <Content Include="Content\DataTables\css\buttons.foundation.min.css" />
+    <Content Include="Content\DataTables\css\buttons.jqueryui.css" />
+    <Content Include="Content\DataTables\css\buttons.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\buttons.semanticui.css" />
+    <Content Include="Content\DataTables\css\buttons.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.bootstrap.css" />
+    <Content Include="Content\DataTables\css\colReorder.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\colReorder.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.dataTables.css" />
+    <Content Include="Content\DataTables\css\colReorder.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.foundation.css" />
+    <Content Include="Content\DataTables\css\colReorder.foundation.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.jqueryui.css" />
+    <Content Include="Content\DataTables\css\colReorder.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.semanticui.css" />
+    <Content Include="Content\DataTables\css\colReorder.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.foundation.css" />
+    <Content Include="Content\DataTables\css\dataTables.foundation.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.jqueryui.css" />
+    <Content Include="Content\DataTables\css\dataTables.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.material.css" />
+    <Content Include="Content\DataTables\css\dataTables.material.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.semanticui.css" />
+    <Content Include="Content\DataTables\css\dataTables.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.uikit.css" />
+    <Content Include="Content\DataTables\css\dataTables.uikit.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.bootstrap.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.dataTables.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.foundation.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.foundation.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.jqueryui.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.semanticui.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.bootstrap.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.dataTables.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.foundation.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.foundation.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.jqueryui.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.semanticui.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\DataTables\css\keyTable.bootstrap.css" />
+    <Content Include="Content\DataTables\css\keyTable.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\keyTable.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.dataTables.css" />
+    <Content Include="Content\DataTables\css\keyTable.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.foundation.css" />
+    <Content Include="Content\DataTables\css\keyTable.foundation.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.jqueryui.css" />
+    <Content Include="Content\DataTables\css\keyTable.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.semanticui.css" />
+    <Content Include="Content\DataTables\css\keyTable.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\responsive.bootstrap.css" />
+    <Content Include="Content\DataTables\css\responsive.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\responsive.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\responsive.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\responsive.dataTables.css" />
+    <Content Include="Content\DataTables\css\responsive.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\responsive.foundation.css" />
+    <Content Include="Content\DataTables\css\responsive.foundation.min.css" />
+    <Content Include="Content\DataTables\css\responsive.jqueryui.css" />
+    <Content Include="Content\DataTables\css\responsive.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\responsive.semanticui.css" />
+    <Content Include="Content\DataTables\css\responsive.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\rowGroup.bootstrap.css" />
+    <Content Include="Content\DataTables\css\rowGroup.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\rowGroup.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\rowGroup.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\rowGroup.dataTables.css" />
+    <Content Include="Content\DataTables\css\rowGroup.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\rowGroup.foundation.css" />
+    <Content Include="Content\DataTables\css\rowGroup.foundation.min.css" />
+    <Content Include="Content\DataTables\css\rowGroup.jqueryui.css" />
+    <Content Include="Content\DataTables\css\rowGroup.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\rowGroup.semanticui.css" />
+    <Content Include="Content\DataTables\css\rowGroup.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.bootstrap.css" />
+    <Content Include="Content\DataTables\css\rowReorder.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\rowReorder.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.dataTables.css" />
+    <Content Include="Content\DataTables\css\rowReorder.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.foundation.css" />
+    <Content Include="Content\DataTables\css\rowReorder.foundation.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.jqueryui.css" />
+    <Content Include="Content\DataTables\css\rowReorder.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.semanticui.css" />
+    <Content Include="Content\DataTables\css\rowReorder.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\scroller.bootstrap.css" />
+    <Content Include="Content\DataTables\css\scroller.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\scroller.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\scroller.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\scroller.dataTables.css" />
+    <Content Include="Content\DataTables\css\scroller.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\scroller.foundation.css" />
+    <Content Include="Content\DataTables\css\scroller.foundation.min.css" />
+    <Content Include="Content\DataTables\css\scroller.jqueryui.css" />
+    <Content Include="Content\DataTables\css\scroller.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\scroller.semanticui.css" />
+    <Content Include="Content\DataTables\css\scroller.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\select.bootstrap.css" />
+    <Content Include="Content\DataTables\css\select.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\select.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\select.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\select.dataTables.css" />
+    <Content Include="Content\DataTables\css\select.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\select.foundation.css" />
+    <Content Include="Content\DataTables\css\select.foundation.min.css" />
+    <Content Include="Content\DataTables\css\select.jqueryui.css" />
+    <Content Include="Content\DataTables\css\select.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\select.semanticui.css" />
+    <Content Include="Content\DataTables\css\select.semanticui.min.css" />
+    <Content Include="Content\DataTables\images\details_close.png" />
+    <Content Include="Content\DataTables\images\details_open.png" />
+    <Content Include="Content\DataTables\images\sort_asc.png" />
+    <Content Include="Content\DataTables\images\sort_asc_disabled.png" />
+    <Content Include="Content\DataTables\images\sort_both.png" />
+    <Content Include="Content\DataTables\images\sort_desc.png" />
+    <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
+    <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="DefaultView.ascx" />
+    <Content Include="ERPService.asmx" />
+    <Content Include="FacCred.css" />
+    <Content Include="images\parisBuilding.jpg" />
+    <Content Include="Reports\FACCRED_SSRS_Faculty.aspx" />
+    <Content Include="Screens\ACADCREDScreen.ascx" />
+    <Content Include="Screens\AdminNoteTypesScreen.ascx" />
+    <Content Include="Screens\AdminScreen.ascx" />
+    <Content Include="Screens\ApprovalNoteScreen.ascx" />
+    <Content Include="Screens\ApprovalsScreen.ascx" />
+    <Content Include="Screens\ApprovalUpdateScreen.ascx" />
+    <Content Include="Screens\BlankScreen.ascx" />
+    <Content Include="Screens\CatalogScreen.ascx" />
+    <Content Include="Screens\COPYOLScreen.ascx" />
+    <Content Include="Screens\CourseApprovalScreen.ascx" />
+    <Content Include="Screens\CourseApprovalUpdateScreen.ascx" />
+    <Content Include="Screens\CoursesPartial.ascx" />
+    <Content Include="Screens\CoursesScreen.ascx" />
+    <Content Include="Screens\CredentialsPartial.ascx" />
+    <Content Include="Screens\CredentialsScreen.ascx" />
+    <Content Include="Screens\CREDITScreen.ascx" />
+    <Content Include="Screens\DisciplineScreen.ascx" />
+    <Content Include="Screens\DisciplineUpdateScreen.ascx" />
+    <Content Include="Screens\EDUEarnHistScreen.ascx" />
+    <Content Include="Screens\EXCredentialsScreen.ascx" />
+    <Content Include="Screens\FacultyApprovalScreen.ascx" />
+    <Content Include="Screens\FacultyApprovalUpdateScreen.ascx" />
+    <Content Include="Screens\FacultyNoteArchiveScreen.ascx" />
+    <Content Include="Screens\FacultyNoteScreen.ascx" />
+    <Content Include="Screens\FacultyScreen.ascx" />
+    <Content Include="Screens\JunkScreen.ascx" />
+    <Content Include="Screens\LoadingScreen.ascx" />
+    <Content Include="Screens\MainMenu.ascx" />
+    <Content Include="Screens\NotesScreen.ascx" />
+    <Content Include="Screens\NotesUpdateScreen.ascx" />
+    <Content Include="Screens\OTHERQUALScreen.ascx" />
+    <Content Include="Screens\PXCodesScreen.ascx" />
+    <Content Include="Screens\PXCoursesScreen.ascx" />
+    <Content Include="Screens\ReportsScreen.ascx" />
+    <Content Include="Screens\StatusScreen.ascx" />
+    <Content Include="Screens\UnauthorizedScreen.ascx" />
+    <Content Include="Screens\UpdateScreen.ascx" />
+    <Content Include="packages.config" />
+    <Content Include="Content\DataTables\css\semanticui.scss" />
+    <Content Include="Content\DataTables\css\mixins.scss" />
+    <Content Include="Content\DataTables\css\common.scss" />
+    <Content Include="Screens\UserAccessDirectScreen.ascx" />
+    <Content Include="Screens\UserAccessDirectUpdateScreen.ascx" />
+    <Content Include="Screens\UserAccessScreen.ascx" />
+    <Content Include="Screens\UserAccessUpdateScreen.ascx" />
+    <Content Include="scripts\css\images\alert.png" />
+    <Content Include="scripts\css\images\arrow_down.gif" />
+    <Content Include="scripts\css\images\arrow_up.gif" />
+    <Content Include="scripts\css\images\delete.gif" />
+    <Content Include="scripts\css\images\delete.png" />
+    <Content Include="scripts\css\images\delete22x22.png" />
+    <Content Include="scripts\css\images\enable.png" />
+    <Content Include="scripts\css\images\exclamation.png" />
+    <Content Include="scripts\css\images\tick.png" />
+    <Content Include="scripts\css\images\white-tick-16.png" />
+    <Content Include="scripts\css\images\white_check.gif" />
+    <Content Include="scripts\css\images\white_check_large.gif" />
+    <Content Include="scripts\css\style.css.map" />
+    <Content Include="ClientConfig\ERPDataConnection.config" />
+    <None Include="scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="scripts\css\style.css" />
+    <Content Include="scripts\DataTables\autoFill.bootstrap.js" />
+    <Content Include="scripts\DataTables\autoFill.bootstrap.min.js" />
+    <Content Include="scripts\DataTables\autoFill.bootstrap4.js" />
+    <Content Include="scripts\DataTables\autoFill.bootstrap4.min.js" />
+    <Content Include="scripts\DataTables\autoFill.foundation.js" />
+    <Content Include="scripts\DataTables\autoFill.foundation.min.js" />
+    <Content Include="scripts\DataTables\autoFill.jqueryui.js" />
+    <Content Include="scripts\DataTables\autoFill.jqueryui.min.js" />
+    <Content Include="scripts\DataTables\autoFill.semanticui.js" />
+    <Content Include="scripts\DataTables\autoFill.semanticui.min.js" />
+    <Content Include="scripts\DataTables\buttons.bootstrap.js" />
+    <Content Include="scripts\DataTables\buttons.bootstrap.min.js" />
+    <Content Include="scripts\DataTables\buttons.bootstrap4.js" />
+    <Content Include="scripts\DataTables\buttons.bootstrap4.min.js" />
+    <Content Include="scripts\DataTables\buttons.colVis.js" />
+    <Content Include="scripts\DataTables\buttons.colVis.min.js" />
+    <Content Include="scripts\DataTables\buttons.flash.js" />
+    <Content Include="scripts\DataTables\buttons.flash.min.js" />
+    <Content Include="scripts\DataTables\buttons.foundation.js" />
+    <Content Include="scripts\DataTables\buttons.foundation.min.js" />
+    <Content Include="scripts\DataTables\buttons.html5.js" />
+    <Content Include="scripts\DataTables\buttons.html5.min.js" />
+    <Content Include="scripts\DataTables\buttons.jqueryui.js" />
+    <Content Include="scripts\DataTables\buttons.jqueryui.min.js" />
+    <Content Include="scripts\DataTables\buttons.print.js" />
+    <Content Include="scripts\DataTables\buttons.print.min.js" />
+    <Content Include="scripts\DataTables\buttons.semanticui.js" />
+    <Content Include="scripts\DataTables\buttons.semanticui.min.js" />
+    <Content Include="scripts\DataTables\dataTables.autoFill.js" />
+    <Content Include="scripts\DataTables\dataTables.autoFill.min.js" />
+    <Content Include="scripts\DataTables\dataTables.bootstrap.js" />
+    <Content Include="scripts\DataTables\dataTables.bootstrap.min.js" />
+    <Content Include="scripts\DataTables\dataTables.bootstrap4.js" />
+    <Content Include="scripts\DataTables\dataTables.bootstrap4.min.js" />
+    <Content Include="scripts\DataTables\dataTables.buttons.js" />
+    <Content Include="scripts\DataTables\dataTables.buttons.min.js" />
+    <Content Include="scripts\DataTables\dataTables.colReorder.js" />
+    <Content Include="scripts\DataTables\dataTables.colReorder.min.js" />
+    <Content Include="scripts\DataTables\dataTables.fixedColumns.js" />
+    <Content Include="scripts\DataTables\dataTables.fixedColumns.min.js" />
+    <Content Include="scripts\DataTables\dataTables.fixedHeader.js" />
+    <Content Include="scripts\DataTables\dataTables.fixedHeader.min.js" />
+    <Content Include="scripts\DataTables\dataTables.foundation.js" />
+    <Content Include="scripts\DataTables\dataTables.foundation.min.js" />
+    <Content Include="scripts\DataTables\dataTables.jqueryui.js" />
+    <Content Include="scripts\DataTables\dataTables.jqueryui.min.js" />
+    <Content Include="scripts\DataTables\dataTables.keyTable.js" />
+    <Content Include="scripts\DataTables\dataTables.keyTable.min.js" />
+    <Content Include="scripts\DataTables\dataTables.material.js" />
+    <Content Include="scripts\DataTables\dataTables.material.min.js" />
+    <Content Include="scripts\DataTables\dataTables.responsive.js" />
+    <Content Include="scripts\DataTables\dataTables.responsive.min.js" />
+    <Content Include="scripts\DataTables\dataTables.rowGroup.js" />
+    <Content Include="scripts\DataTables\dataTables.rowGroup.min.js" />
+    <Content Include="scripts\DataTables\dataTables.rowReorder.js" />
+    <Content Include="scripts\DataTables\dataTables.rowReorder.min.js" />
+    <Content Include="scripts\DataTables\dataTables.scroller.js" />
+    <Content Include="scripts\DataTables\dataTables.scroller.min.js" />
+    <Content Include="scripts\DataTables\dataTables.select.js" />
+    <Content Include="scripts\DataTables\dataTables.select.min.js" />
+    <Content Include="scripts\DataTables\dataTables.semanticui.js" />
+    <Content Include="scripts\DataTables\dataTables.semanticui.min.js" />
+    <Content Include="scripts\DataTables\dataTables.uikit.js" />
+    <Content Include="scripts\DataTables\dataTables.uikit.min.js" />
+    <Content Include="scripts\DataTables\jquery.dataTables.js" />
+    <Content Include="scripts\DataTables\jquery.dataTables.min.js" />
+    <Content Include="scripts\DataTables\responsive.bootstrap.js" />
+    <Content Include="scripts\DataTables\responsive.bootstrap.min.js" />
+    <Content Include="scripts\DataTables\responsive.bootstrap4.js" />
+    <Content Include="scripts\DataTables\responsive.bootstrap4.min.js" />
+    <Content Include="scripts\DataTables\responsive.foundation.js" />
+    <Content Include="scripts\DataTables\responsive.foundation.min.js" />
+    <Content Include="scripts\DataTables\responsive.jqueryui.js" />
+    <Content Include="scripts\DataTables\responsive.jqueryui.min.js" />
+    <Content Include="scripts\DataTables\responsive.semanticui.js" />
+    <Content Include="scripts\DataTables\responsive.semanticui.min.js" />
+    <Content Include="scripts\jquery-3.1.1.js" />
+    <Content Include="scripts\jquery-3.1.1.min.js" />
+    <Content Include="scripts\jquery-3.1.1.slim.js" />
+    <Content Include="scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="scripts\jquery-ui-1.12.1.js" />
+    <Content Include="scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="scripts\jqueryUIcustom\AUTHORS.txt" />
+    <Content Include="scripts\jqueryUIcustom\external\jquery\jquery.js" />
+    <Content Include="scripts\jqueryUIcustom\images\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="scripts\jqueryUIcustom\images\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="scripts\jqueryUIcustom\images\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="scripts\jqueryUIcustom\images\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="scripts\jqueryUIcustom\images\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="scripts\jqueryUIcustom\images\ui-icons_3383bb_256x240.png" />
+    <Content Include="scripts\jqueryUIcustom\images\ui-icons_454545_256x240.png" />
+    <Content Include="scripts\jqueryUIcustom\images\ui-icons_70b2e1_256x240.png" />
+    <Content Include="scripts\jqueryUIcustom\images\ui-icons_999999_256x240.png" />
+    <Content Include="scripts\jqueryUIcustom\images\ui-icons_fbc856_256x240.png" />
+    <Content Include="scripts\jqueryUIcustom\index.html" />
+    <Content Include="scripts\jqueryUIcustom\jquery-ui.css" />
+    <Content Include="scripts\jqueryUIcustom\jquery-ui.js" />
+    <Content Include="scripts\jqueryUIcustom\jquery-ui.min.css" />
+    <Content Include="scripts\jqueryUIcustom\jquery-ui.min.js" />
+    <Content Include="scripts\jqueryUIcustom\jquery-ui.structure.css" />
+    <Content Include="scripts\jqueryUIcustom\jquery-ui.structure.min.css" />
+    <Content Include="scripts\jqueryUIcustom\jquery-ui.theme.css" />
+    <Content Include="scripts\jqueryUIcustom\jquery-ui.theme.min.css" />
+    <Content Include="scripts\jqueryUIcustom\LICENSE.txt" />
+    <Content Include="scripts\local\dataTables-1.11.1.min.js" />
+    <Content Include="scripts\local\dataTables.jqueryui.css" />
+    <Content Include="scripts\local\dataTables.jqueryui.js" />
+    <Content Include="scripts\local\dataTables.select.min.js" />
+    <Content Include="scripts\local\jquery-ui.css" />
+    <Content Include="scripts\local\jquery.dataTables.min.js" />
+    <Content Include="scripts\local\select.dataTables.min.css" />
+    <Content Include="scripts\tinymce\jquery.tinymce.min.js" />
+    <Content Include="scripts\tinymce\license.txt" />
+    <Content Include="scripts\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\bbcode\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\codesample\css\prism.css" />
+    <Content Include="scripts\tinymce\plugins\codesample\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\code\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\colorpicker\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\compat3x\css\dialog.css" />
+    <Content Include="scripts\tinymce\plugins\compat3x\img\buttons.png" />
+    <Content Include="scripts\tinymce\plugins\compat3x\img\icons.gif" />
+    <Content Include="scripts\tinymce\plugins\compat3x\img\items.gif" />
+    <Content Include="scripts\tinymce\plugins\compat3x\img\menu_arrow.gif" />
+    <Content Include="scripts\tinymce\plugins\compat3x\img\menu_check.gif" />
+    <Content Include="scripts\tinymce\plugins\compat3x\img\progress.gif" />
+    <Content Include="scripts\tinymce\plugins\compat3x\img\tabs.gif" />
+    <Content Include="scripts\tinymce\plugins\compat3x\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\compat3x\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\compat3x\tiny_mce_popup.js" />
+    <Content Include="scripts\tinymce\plugins\compat3x\utils\editable_selects.js" />
+    <Content Include="scripts\tinymce\plugins\compat3x\utils\form_utils.js" />
+    <Content Include="scripts\tinymce\plugins\compat3x\utils\mctabs.js" />
+    <Content Include="scripts\tinymce\plugins\compat3x\utils\validate.js" />
+    <Content Include="scripts\tinymce\plugins\contextmenu\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\fullpage\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\help\img\logo.png" />
+    <Content Include="scripts\tinymce\plugins\help\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\hr\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\imagetools\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\image\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\importcss\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\legacyoutput\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\link\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\lists\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\media\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\noneditable\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\paste\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\preview\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\print\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\save\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\spellchecker\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\tabfocus\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\table\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\template\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\textcolor\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\textpattern\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\toc\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\toc\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="scripts\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="scripts\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="scripts\tinymce\skins\lightgray\content.mobile.min.css" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="scripts\tinymce\skins\lightgray\skin.mobile.min.css" />
+    <Content Include="scripts\tinymce\themes\inlite\theme.js" />
+    <Content Include="scripts\tinymce\themes\inlite\theme.min.js" />
+    <Content Include="scripts\tinymce\themes\mobile\theme.js" />
+    <Content Include="scripts\tinymce\themes\mobile\theme.min.js" />
+    <Content Include="scripts\tinymce\themes\modern\theme.js" />
+    <Content Include="scripts\tinymce\themes\modern\theme.min.js" />
+    <Content Include="scripts\tinymce\tinymce.js" />
+    <Content Include="scripts\tinymce\tinymce.min.js" />
+    <Content Include="Services\NotesService.asmx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="web.configSAVE">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="scripts\jquery-3.1.1.min.map" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\tinymce-mobile.woff" />
+    <Content Include="scripts\tinymce\langs\readme.md" />
+    <Content Include="scripts\jqueryUIcustom\package.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.Debug.configSAVE">
+      <DependentUpon>web.configSAVE</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.configSAVE">
+      <DependentUpon>web.configSAVE</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report1.rdlc" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54299/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
